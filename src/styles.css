@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --cream: #eeead7;
+  --sage: #757d6f;
+  --dark: #2d0000;
+  --red: #6d0808;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: "DM Sans", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: relative;
+
+  width: 100%;
+  height: 90px;
+
+  padding: 0 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: var(--dark);
+  text-decoration: none;
+
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+/* LEFT NAV */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+/* RIGHT NAV */
+
+.nav-right {
+  margin-left: auto;
+}
+
+.nav-right a {
+  color: var(--dark);
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+
+  color: var(--dark);
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dropdown-button span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 32px;
+  left: 0;
+
+  width: 200px;
+
+  background: var(--dark);
+
+  padding: 8px 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  transition: all 0.25s ease;
+
+  z-index: 100;
+}
+
+/* DROPDOWN LINKS */
+
+.dropdown-menu a {
+  display: block;
+
+  padding: 12px 18px;
+
+  color: var(--cream);
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: var(--red);
+}
+
+/* HOVER */
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.dropdown:hover .dropdown-button span {
+  transform: rotate(45deg);
+}
+
+.dropdown-button:hover,
+.nav-right a:hover {
+  color: var(--red);
+}
